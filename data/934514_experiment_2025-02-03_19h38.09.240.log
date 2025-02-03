@@ -1,0 +1,71 @@
+17.3749 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+17.3754 	INFO 	Loaded monitor calibration from ['2024_10_24 06:05']
+18.4070 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022C21E4AFE0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022C21E4B040>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000022C21F42BF0>, multiSample=False, name='window1', numSamples=2, pos=[560.0, 240.0], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+18.4070 	EXP 	window1: backgroundImage = ''
+18.4071 	EXP 	window1: backgroundFit = 'none'
+18.4406 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4413 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4420 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4429 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4438 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4442 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4449 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4458 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4461 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4464 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4472 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4478 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4485 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4492 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4498 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4505 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4512 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4516 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4521 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4530 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4534 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4537 	DEBUG 	Uploading Texture Font fontname to graphics card
+18.4654 	DEBUG 	Upload of Texture Font fontname complete
+18.4794 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4803 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4812 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.4814 	DEBUG 	Uploading Texture Font fontname to graphics card
+18.4942 	DEBUG 	Upload of Texture Font fontname complete
+18.4961 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+18.4962 	EXP 	window1: recordFrameIntervals = False
+18.6094 	EXP 	window1: recordFrameIntervals = True
+18.7191 	EXP 	Screen (0) actual frame rate measured at 100.05Hz
+18.7191 	EXP 	window1: recordFrameIntervals = False
+18.7326 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7331 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7338 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7348 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7357 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7367 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7371 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7380 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7389 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7398 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7401 	DEBUG 	Uploading Texture Font fontname to graphics card
+18.7405 	DEBUG 	Upload of Texture Font fontname complete
+18.8833 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+22.3664 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3665 	EXP 	experiment: status = STARTED
+22.7122 	EXP 	Created text_norm = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_norm', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.8)
+22.7644 	EXP 	Created location_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='response.png', interpolate=True, mask=None, maskParams=None, name='location_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+22.7663 	EXP 	Created text_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_countdown', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.0024 	EXP 	text_norm: alignText = 'left'
+0.0227 	EXP 	text_norm: autoDraw = True
+0.0227 	EXP 	text_norm: height = 0.1
+0.0227 	EXP 	text_norm: height = 0.1
+0.0227 	EXP 	text_norm: height = 0.1
+0.0227 	EXP 	text_norm: text = 'Welcome to the experiment.\n\nIn this experiment, there sounds will be coming in from four possible locations. You have to identify, to the best of your ability, where the sounds are coming from.\n\nThe four buttons in front of you comprise of the four possible locations the sound might come from.\n\n\nPress any buttons to see the four possible locations.'
+2.9960 	EXP 	text_norm: autoDraw = False
+2.9960 	EXP 	location_image: autoDraw = True
+7.9629 	EXP 	location_image: autoDraw = False
+7.9629 	EXP 	text_countdown: autoDraw = True
+17.9532 	EXP 	text_countdown: autoDraw = False
+17.9552 	EXP 	experiment: status = STOPPED
+17.9579 	INFO 	saved data to 'C:\\Users\\RATNAM_LAB\\Documents\\01 Pushkar\\003 Thesis Experiment\\01 Experimental Files\\data/934514_experiment_2025-02-03_19h38.09.240.csv'
+17.9588 	INFO 	saved data to C:\Users\RATNAM_LAB\Documents\01 Pushkar\003 Thesis Experiment\01 Experimental Files\data/934514_experiment_2025-02-03_19h38.09.240.psydat
+18.5208 	DEBUG 	Saving data for experiment ExperimentHandler
