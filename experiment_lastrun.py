@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.3),
-    on February 03, 2025, at 19:39
+    on February 04, 2025, at 12:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -81,7 +81,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = (1024, 768)
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -216,7 +216,7 @@ def setupWindow(expInfo=None, win=None):
         win = visual.Window(
             size=_winSize, fullscr=_fullScr, screen=0,
             winType='pyglet', allowGUI=False, allowStencil=False,
-            monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+            monitor='testMonitor', color=[-1.0000, -1.0000, -1.0000], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
             blendMode='avg', useFBO=True,
             units='height',
@@ -224,7 +224,7 @@ def setupWindow(expInfo=None, win=None):
         )
     else:
         # if we have a window, just set the attributes which are safe to set
-        win.color = [0,0,0]
+        win.color = [-1.0000, -1.0000, -1.0000]
         win.colorSpace = 'rgb'
         win.backgroundImage = ''
         win.backgroundFit = 'none'
@@ -398,24 +398,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # text component it refers to.
     text_norm.alignText= 'left'
     
-    # --- Initialize components for Routine "image_instruction" ---
-    location_image = visual.ImageStim(
-        win=win,
-        name='location_image', 
-        image='response.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
-        color=[1,1,1], colorSpace='rgb', opacity=None,
-        flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=0.0)
-    
-    # --- Initialize components for Routine "countdown" ---
-    text_countdown = visual.TextStim(win=win, name='text_countdown',
-        text='',
-        font='Open Sans',
-        pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
+    # --- Initialize components for Routine "task" ---
+    polygon = visual.Rect(
+        win=win, name='polygon',units='pix', 
+        width=(150, 200)[0], height=(150, 200)[1],
+        ori=0.0, pos=(960, -540), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor='white',
+        opacity=None, depth=0.0, interpolate=True)
     
     # create some handy timers
     
@@ -632,24 +622,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "Instructions" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # --- Prepare to start Routine "image_instruction" ---
-    # create an object to store info about Routine image_instruction
-    image_instruction = data.Routine(
-        name='image_instruction',
-        components=[location_image],
+    # --- Prepare to start Routine "task" ---
+    # create an object to store info about Routine task
+    task = data.Routine(
+        name='task',
+        components=[polygon],
     )
-    image_instruction.status = NOT_STARTED
+    task.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
-    # store start times for image_instruction
-    image_instruction.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    image_instruction.tStart = globalClock.getTime(format='float')
-    image_instruction.status = STARTED
-    thisExp.addData('image_instruction.started', image_instruction.tStart)
-    image_instruction.maxDuration = None
+    # store start times for task
+    task.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    task.tStart = globalClock.getTime(format='float')
+    task.status = STARTED
+    thisExp.addData('task.started', task.tStart)
+    task.maxDuration = None
     # keep track of which components have finished
-    image_instructionComponents = image_instruction.components
-    for thisComponent in image_instruction.components:
+    taskComponents = task.components
+    for thisComponent in task.components:
         thisComponent.tStart = None
         thisComponent.tStop = None
         thisComponent.tStartRefresh = None
@@ -661,8 +651,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
     
-    # --- Run Routine "image_instruction" ---
-    image_instruction.forceEnded = routineForceEnded = not continueRoutine
+    # --- Run Routine "task" ---
+    task.forceEnded = routineForceEnded = not continueRoutine
     while continueRoutine and routineTimer.getTime() < 5.0:
         # get current time
         t = routineTimer.getTime()
@@ -671,39 +661,39 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *location_image* updates
+        # *polygon* updates
         
-        # if location_image is starting this frame...
-        if location_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if polygon is starting this frame...
+        if polygon.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            location_image.frameNStart = frameN  # exact frame index
-            location_image.tStart = t  # local t and not account for scr refresh
-            location_image.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(location_image, 'tStartRefresh')  # time at next scr refresh
+            polygon.frameNStart = frameN  # exact frame index
+            polygon.tStart = t  # local t and not account for scr refresh
+            polygon.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(polygon, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'location_image.started')
+            thisExp.timestampOnFlip(win, 'polygon.started')
             # update status
-            location_image.status = STARTED
-            location_image.setAutoDraw(True)
+            polygon.status = STARTED
+            polygon.setAutoDraw(True)
         
-        # if location_image is active this frame...
-        if location_image.status == STARTED:
+        # if polygon is active this frame...
+        if polygon.status == STARTED:
             # update params
             pass
         
-        # if location_image is stopping this frame...
-        if location_image.status == STARTED:
+        # if polygon is stopping this frame...
+        if polygon.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > location_image.tStartRefresh + 5.0-frameTolerance:
+            if tThisFlipGlobal > polygon.tStartRefresh + 5.0-frameTolerance:
                 # keep track of stop time/frame for later
-                location_image.tStop = t  # not accounting for scr refresh
-                location_image.tStopRefresh = tThisFlipGlobal  # on global time
-                location_image.frameNStop = frameN  # exact frame index
+                polygon.tStop = t  # not accounting for scr refresh
+                polygon.tStopRefresh = tThisFlipGlobal  # on global time
+                polygon.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'location_image.stopped')
+                thisExp.timestampOnFlip(win, 'polygon.stopped')
                 # update status
-                location_image.status = FINISHED
-                location_image.setAutoDraw(False)
+                polygon.status = FINISHED
+                polygon.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -724,10 +714,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
-            image_instruction.forceEnded = routineForceEnded = True
+            task.forceEnded = routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in image_instruction.components:
+        for thisComponent in task.components:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -736,142 +726,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # --- Ending Routine "image_instruction" ---
-    for thisComponent in image_instruction.components:
+    # --- Ending Routine "task" ---
+    for thisComponent in task.components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    # store stop times for image_instruction
-    image_instruction.tStop = globalClock.getTime(format='float')
-    image_instruction.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('image_instruction.stopped', image_instruction.tStop)
+    # store stop times for task
+    task.tStop = globalClock.getTime(format='float')
+    task.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('task.stopped', task.tStop)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if image_instruction.maxDurationReached:
-        routineTimer.addTime(-image_instruction.maxDuration)
-    elif image_instruction.forceEnded:
+    if task.maxDurationReached:
+        routineTimer.addTime(-task.maxDuration)
+    elif task.forceEnded:
         routineTimer.reset()
     else:
         routineTimer.addTime(-5.000000)
-    thisExp.nextEntry()
-    
-    # --- Prepare to start Routine "countdown" ---
-    # create an object to store info about Routine countdown
-    countdown = data.Routine(
-        name='countdown',
-        components=[text_countdown],
-    )
-    countdown.status = NOT_STARTED
-    continueRoutine = True
-    # update component parameters for each repeat
-    # store start times for countdown
-    countdown.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-    countdown.tStart = globalClock.getTime(format='float')
-    countdown.status = STARTED
-    thisExp.addData('countdown.started', countdown.tStart)
-    countdown.maxDuration = None
-    # keep track of which components have finished
-    countdownComponents = countdown.components
-    for thisComponent in countdown.components:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "countdown" ---
-    countdown.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 10.0:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *text_countdown* updates
-        
-        # if text_countdown is starting this frame...
-        if text_countdown.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_countdown.frameNStart = frameN  # exact frame index
-            text_countdown.tStart = t  # local t and not account for scr refresh
-            text_countdown.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_countdown, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_countdown.started')
-            # update status
-            text_countdown.status = STARTED
-            text_countdown.setAutoDraw(True)
-        
-        # if text_countdown is active this frame...
-        if text_countdown.status == STARTED:
-            # update params
-            text_countdown.setText(str(10-int(t)), log=False)
-        
-        # if text_countdown is stopping this frame...
-        if text_countdown.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_countdown.tStartRefresh + 10-frameTolerance:
-                # keep track of stop time/frame for later
-                text_countdown.tStop = t  # not accounting for scr refresh
-                text_countdown.tStopRefresh = tThisFlipGlobal  # on global time
-                text_countdown.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text_countdown.stopped')
-                # update status
-                text_countdown.status = FINISHED
-                text_countdown.setAutoDraw(False)
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        # pause experiment here if requested
-        if thisExp.status == PAUSED:
-            pauseExperiment(
-                thisExp=thisExp, 
-                win=win, 
-                timers=[routineTimer], 
-                playbackComponents=[]
-            )
-            # skip the frame we paused on
-            continue
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            countdown.forceEnded = routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in countdown.components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "countdown" ---
-    for thisComponent in countdown.components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # store stop times for countdown
-    countdown.tStop = globalClock.getTime(format='float')
-    countdown.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('countdown.stopped', countdown.tStop)
-    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if countdown.maxDurationReached:
-        routineTimer.addTime(-countdown.maxDuration)
-    elif countdown.forceEnded:
-        routineTimer.reset()
-    else:
-        routineTimer.addTime(-10.000000)
     thisExp.nextEntry()
     # Run 'End Experiment' code from code
     syn.setModeStr('Idle')
