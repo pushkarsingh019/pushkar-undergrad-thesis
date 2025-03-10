@@ -8,7 +8,7 @@ folder_path = Path('Stimuli')  # Change '.' to your specific folder if needed
 wav_files = folder_path.glob("*.wav")
 
 # Define the output CSV file and the headers
-output_csv = "output.csv"
+output_csv = "low_frequency_conditions.csv"
 headers = ["path", "file_type", "SNR", "frequency", "angle", "channel", "location_condition"]
 
 with open(output_csv, mode="w", newline="") as csvfile:
